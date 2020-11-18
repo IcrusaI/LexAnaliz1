@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10.0" pickOnBounds="false" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Label contentDisplay="BOTTOM" text="Ключевые слова (1)">
+         <graphic>
+            <ListView fx:id="keywords" prefHeight="235.0" prefWidth="140.0" />
+         </graphic>
+      </Label>
+      <Label contentDisplay="BOTTOM" text="Разделители (2)" GridPane.columnIndex="1">
+         <graphic>
+            <ListView fx:id="separators" prefHeight="235.0" prefWidth="140.0" />
+         </graphic>
+      </Label>
+      <Label contentDisplay="BOTTOM" text="Идентификаторы (3)" GridPane.rowIndex="1">
+         <graphic>
+            <ListView fx:id="variables" prefHeight="235.0" prefWidth="140.0" />
+         </graphic>
+      </Label>
+      <Label contentDisplay="BOTTOM" text="Числа (4)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <graphic>
+            <ListView fx:id="numbers" prefHeight="235.0" prefWidth="140.0" />
+         </graphic>
+      </Label>
+      <Label contentDisplay="BOTTOM" text="Исходный код" GridPane.columnIndex="2" GridPane.rowSpan="2">
+         <graphic>
+            <TextArea fx:id="code" prefHeight="500.0" prefWidth="408.0" text="begin&#10;&#9;dim&#10;&#9;&#9;int a,b,i;&#10;&#9;&#9;float c,d;&#10;&#9;&#9;bool e,f;&#10;&#9;&#9;&#10;&#9;let a = 101b * 264o; %Двоичная и восьмеричная%&#10;&#9;b = 247d / b13ah; %Десятичная и шестнадцатиричная%&#10;&#9;let c = 13e5 + b; %Экспонтециальная форма%&#10;&#9;let d = 7 + 4;&#10;&#9;&#10;&#9;if c &gt;= b + a then&#10;&#9;&#9;c = c / 2;&#10;&#9;else&#10;&#9;&#9;c = c / 8;&#10;&#9;end_else&#10;&#9;&#10;&#9;for (d = 1; d &lt; 15; i=i + 1)&#10;&#9;&#9;output (&quot;d=&quot;, d);&#10;&#9;&#9;i=i + 1;&#10;&#9;&#10;&#9;do while f = true&#10;&#9;&#9;e = false;&#10;&#9;loop&#10;&#9;&#10;&#9;input (a, b, c, d);&#10;&#9;&#10;&#9;output (&quot;Tests&quot;, &quot;b=&quot;, b);&#10;&#9;&#10;end&#10;" />
+         </graphic>
+      </Label>
+      <Label contentDisplay="BOTTOM" text="Результаты анализа" GridPane.columnSpan="4" GridPane.rowIndex="2">
+         <graphic>
+            <TextArea fx:id="output" editable="false" prefHeight="200.0" prefWidth="709.0" />
+         </graphic>
+      </Label>
+      <Button fx:id="checkButton" alignment="CENTER" contentDisplay="RIGHT" defaultButton="true" mnemonicParsing="false" onAction="#onClickCheck" prefHeight="25.0" prefWidth="130.0" text="Проверить" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
